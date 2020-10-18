@@ -362,7 +362,8 @@ template {
   --neutral-text-dark: hsl(237, 12%, 33%);
   --neutral-text: hsl(240, 6%, 50%);
   --neutral-divider: hsl(240, 5%, 91%);
-  --font-body: 12px;
+  --font-body: 14px;
+  --font-answer: 12px;
 }
 
 .container {
@@ -380,7 +381,7 @@ template {
   background-color: white;
   background-image: url(./images/bg-pattern-desktop.svg);
   background-size: cover;
-  background-position: top -240px left -450px;
+  background-position: top -280px left -550px;
   background-repeat: no-repeat;
   position: relative;
   justify-content: space-between;
@@ -391,19 +392,19 @@ template {
 
 @media (min-width: 375px) {
   .faq-container {
-    min-width: 600px;
-    min-height: 475px;
+    min-width: 620px;
+    min-height: 500px;
   }
 }
 
 @media (min-width: 768px) {
   .faq-container {
-    min-width: 880px;
+    min-width: 925px;
   }
 }
 
 .img-section {
-  width: 60%;
+  width: 55%;
   position: relative;
   overflow: hidden;
 }
@@ -413,14 +414,14 @@ template {
   height: 100%;
   position: absolute;
   left: -15%;
-  bottom: -50px;
+  bottom: -60px;
   z-index: 9;
 }
 
 .box-img {
   position: absolute;
   left: -14%;
-  top: 170px;
+  top: 200px;
   z-index: 10;
 }
 
@@ -428,16 +429,55 @@ template {
   display: flex;
   background-color: white;
   flex-direction: column;
-  width: 40%;
+  width: 45%;
   padding: 5%;
+  padding-left: 0;
   border-radius: 0 20px 20px 0;
 }
+
+.accordian-section h1 {
+  font-size: 2rem;
+}
+
 .accordian-section ul {
   padding: 0;
 }
 
 .accordian-section li {
   list-style: none;
+}
+
+.accordian-item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--neutral-divider);
+}
+
+.accordian-question {
+  display: flex;
+  align-items: bottom;
+  justify-content: space-between;
+}
+
+.accordian-answer {
+  color: var(--neutral-text);
+  font-size: var(--font-answer);
+}
+
+.active {
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
+
+.icon-arrow {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  height: 20px;
+  width: 20px;
 }
 
 footer {
