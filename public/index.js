@@ -1,7 +1,7 @@
-const accordianList = document.querySelector(".accordian-list");
-const accordianItems = accordianList.children;
+const accordionList = document.querySelector(".accordion-list");
+const accordionItems = accordionList.children;
 
-accordianList.addEventListener("click", (e) => {
+accordionList.addEventListener("click", (e) => {
   const [question, answer] = e.target.children;
 
   question.classList.toggle("active");
@@ -10,7 +10,7 @@ accordianList.addEventListener("click", (e) => {
   const arrow = question.children[1];
   arrow.classList.toggle("reverse");
 
-  [...accordianItems].forEach((item) => {
+  [...accordionItems].forEach((item) => {
     if (item !== e.target) {
       const [itemQuestion, itemAnswer] = item.children;
 
