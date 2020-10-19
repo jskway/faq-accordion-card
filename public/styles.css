@@ -466,6 +466,7 @@ template {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  pointer-events: none;
 }
 
 .accordian-question p {
@@ -491,6 +492,7 @@ template {
 .accordian-answer {
   color: var(--neutral-text);
   font-size: var(--font-answer);
+  pointer-events: none;
 }
 
 .hidden {
