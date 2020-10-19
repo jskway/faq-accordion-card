@@ -447,16 +447,45 @@ template {
   list-style: none;
 }
 
+.accordian-section li:hover {
+  cursor: pointer;
+}
+
+.accordian-list {
+  height: 400px;
+}
+
 .accordian-item {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid var(--neutral-divider);
+  padding-bottom: 10px;
 }
 
 .accordian-question {
   display: flex;
-  align-items: bottom;
+  align-items: center;
   justify-content: space-between;
+}
+
+.accordian-question p {
+  pointer-events: none;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.icon-arrow {
+  display: inline-block;
+  pointer-events: none;
+  height: 10px;
+  width: 10px;
+}
+
+.reverse {
+  transform: rotate(180deg);
+  margin-top: -10px;
 }
 
 .accordian-answer {
@@ -464,20 +493,8 @@ template {
   font-size: var(--font-answer);
 }
 
-.active {
-  font-weight: 700;
-}
-
 .hidden {
   display: none;
-}
-
-.icon-arrow {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  height: 20px;
-  width: 20px;
 }
 
 footer {
