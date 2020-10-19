@@ -1,12 +1,21 @@
 const accordianList = document.querySelector(".accordian-list");
+const accordianItems = accordianList.children;
 
 accordianList.addEventListener("click", (e) => {
-  const target = e.target;
-  target.classList.toggle("active");
+  const [question, answer] = e.target.children;
 
-  console.log("target", target);
-
-  const answer = target.nextSibling.nextSibling;
-  console.log("answer", answer);
+  question.classList.toggle("active");
   answer.classList.toggle("hidden");
+
+  [...accordianItems].forEach((item) => {
+    if (item !== e.target) {
+      const [itemQuestion, itemAnswer] = item.children;
+
+      itemQuestion.classList.remove("active");
+
+      if (![...itemAnswer.classList].includes("hidden")) {
+        itemAnswer.classList.add("hidden");
+      }
+    }
+  });
 });
