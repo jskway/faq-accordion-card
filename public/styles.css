@@ -354,6 +354,11 @@ template {
 
 /* Custom
    ========================================================================== */
+
+/**
+ * Variables
+ */
+
 :root {
   --primary-text-dark: hsl(238, 29%, 16%);
   --primary-text-red: hsl(14, 88%, 65%);
@@ -366,7 +371,12 @@ template {
   --font-answer: 12px;
 }
 
+/**
+ * Containers
+ */
+
 .container {
+  width: 100vw;
   height: 100vh;
   background: linear-gradient(var(--gradient-violet), var(--gradient-blue));
   display: grid;
@@ -378,6 +388,7 @@ template {
 
 .faq-container {
   display: flex;
+  flex-direction: column;
   background-color: white;
   background-image: url(./images/bg-pattern-desktop.svg);
   background-size: cover;
@@ -385,74 +396,76 @@ template {
   background-repeat: no-repeat;
   position: relative;
   justify-content: space-between;
-  height: 90%;
   border: none;
   border-radius: 20px;
+  min-width: 340px;
+  margin: 5% auto;
 }
 
-@media (min-width: 375px) {
-  .faq-container {
-    min-width: 620px;
-    min-height: 500px;
-  }
-}
-
-@media (min-width: 768px) {
-  .faq-container {
-    min-width: 925px;
-  }
-}
+/**
+ * Images
+ */
 
 .img-section {
-  width: 55%;
+  width: 100%;
   position: relative;
-  overflow: hidden;
 }
 
 .desktop-img {
-  width: 100%;
-  height: 100%;
   position: absolute;
-  left: -15%;
-  bottom: -60px;
-  z-index: 9;
+  top: -90px;
+  left: calc(50% - 125px);
+}
+
+.desktop-img image {
+  width: 250px;
+  height: 100%;
 }
 
 .box-img {
   position: absolute;
-  left: -14%;
-  top: 200px;
+  left: calc(50% - 125px);
+  top: -45px;
   z-index: 10;
 }
+
+.box-img image {
+  width: 100px;
+  height: auto;
+}
+
+/**
+ * Accordion
+ */
 
 .accordion-section {
   display: flex;
   background-color: white;
   flex-direction: column;
-  width: 45%;
-  padding: 5%;
-  padding-left: 0;
-  border-radius: 0 20px 20px 0;
+  border-radius: 20px;
+  margin: 5%;
+  justify-content: center;
+  align-items: center;
+  min-height: 550px;
 }
 
 .accordion-section h1 {
   font-size: 2rem;
-}
-
-.accordion-section ul {
-  padding: 0;
-}
-
-.accordion-section li {
-  list-style: none;
-}
-
-.accordion-section li:hover {
-  cursor: pointer;
+  margin-top: 10%;
 }
 
 .accordion-list {
-  height: 400px;
+  min-height: 260px;
+  padding: 0;
+}
+
+.accordion-list li {
+  list-style: none;
+  max-width: 260px;
+}
+
+.accordion-list li:hover {
+  cursor: pointer;
 }
 
 .accordion-item {
@@ -504,10 +517,82 @@ template {
   display: none;
 }
 
+/**
+ * Footer
+ */
+
 footer {
-  position: fixed;
-  padding-bottom: 5%;
-  bottom: 0;
+  margin: 10% auto 0;
   text-align: center;
-  width: 100%;
+}
+
+/**
+ * Media Queries
+ */
+
+@media (min-width: 375px) {
+  .faq-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .faq-container {
+    min-width: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .faq-container {
+    flex-direction: row;
+    min-width: 900px;
+  }
+
+  .desktop-img {
+    width: 100%;
+    height: 100%;
+    left: -15%;
+    top: 20%;
+    z-index: 9;
+  }
+
+  .desktop-img image {
+    width: 100%;
+    height: auto;
+  }
+
+  .box-img {
+    position: absolute;
+    left: -12%;
+    top: 250px;
+    z-index: 10;
+  }
+
+  .box-img image {
+    width: 200px;
+    height: auto;
+  }
+
+  .img-section {
+    width: 55%;
+    overflow: hidden;
+  }
+
+  .accordion-list {
+    min-width: 350px;
+    min-height: 350px;
+  }
+
+  .accordion-section {
+    width: 45%;
+    padding-left: 0;
+    border-radius: 0 20px 20px 0;
+    height: 90%;
+    margin-top: 0;
+    align-items: flex-start;
+  }
+
+  footer {
+    width: 100%;
+  }
 }
