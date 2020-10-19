@@ -460,6 +460,7 @@ template {
   flex-direction: column;
   border-bottom: 1px solid var(--neutral-divider);
   padding-bottom: 10px;
+  transition: 0.3s;
 }
 
 .accordion-question {
@@ -467,6 +468,10 @@ template {
   align-items: center;
   justify-content: space-between;
   pointer-events: none;
+}
+
+.accordion-item:hover {
+  color: var(--primary-text-red);
 }
 
 .accordion-question p {
