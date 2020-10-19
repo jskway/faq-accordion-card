@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="./styles.css" />
 
     <title>Frontend Mentor | FAQ Accordion Card</title>
+    <script defer src="./index.js"></script>
   </head>
   <body>
     <div class="container">
@@ -28,15 +29,21 @@
         </svg>
         <section class="accordian-section">
           <h1>FAQ</h1>
-          <ul>
-            <li>
-              How many team members can I invite?
+          <ul class="accordian-list">
+            <li class="accordian-item">
+              <div class="accordian-question active">
+                <p>
+                  How many team members can I invite?
+                </p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow">
+                  <image href="./images/icon-arrow-down.svg" />
+                </svg>
+              </div>
+              <p class="accordian-answer">
+                You can invite up to 2 additional users on the Free plan. There
+                is no limit on team members for the Premium plan.
+              </p>
             </li>
-            <li>
-              You can invite up to 2 additional users on the Free plan. There is
-              no limit on team members for the Premium plan.
-            </li>
-
             <li>
               What is the maximum file upload size?
             </li>
