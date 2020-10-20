@@ -449,15 +449,15 @@ template {
   justify-content: center;
   align-items: center;
   min-height: 550px;
+  padding-top: 10%;
 }
 
 .accordion-section h1 {
   font-size: 2rem;
-  margin-top: 10%;
 }
 
 .accordion-list {
-  min-height: 260px;
+  min-height: 400px;
   padding: 0;
 }
 
@@ -586,18 +586,19 @@ footer {
   .accordion-list {
     padding: 0;
     min-width: 350px;
-    min-height: 350px;
+    min-height: 400px;
   }
 
   .accordion-section {
     width: 45%;
-    padding-left: 0;
+    padding: 5% 0 0 0;
     border-radius: 0 20px 20px 0;
-    min-height: 500px;
-    align-items: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .accordion-section h1 {
-    margin-top: 15%;
+    margin-top: 15% 0 5%;
+    width: 100%;
   }
 }
