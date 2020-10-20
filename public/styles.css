@@ -525,7 +525,9 @@ template {
  */
 
 footer {
-  margin: 10% auto 0;
+  position: fixed;
+  bottom: 50px;
+  margin: 0 auto;
   text-align: center;
 }
 
