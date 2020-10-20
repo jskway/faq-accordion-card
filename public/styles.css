@@ -409,7 +409,7 @@ template {
  * Images
  */
 
-.img-section {
+.img-container {
   width: 100%;
   position: relative;
 }
@@ -576,7 +576,7 @@ footer {
     height: auto;
   }
 
-  .img-section {
+  .img-container {
     width: 55%;
     overflow: hidden;
   }
