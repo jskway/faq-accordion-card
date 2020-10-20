@@ -402,7 +402,6 @@ template {
   border: none;
   border-radius: 20px;
   min-width: 340px;
-  margin: 5% auto;
 }
 
 /**
@@ -527,6 +526,7 @@ template {
 footer {
   position: fixed;
   bottom: 50px;
+  left: calc((100vw - 333px) / 2);
   margin: 0 auto;
   text-align: center;
 }
@@ -584,6 +584,7 @@ footer {
   }
 
   .accordion-list {
+    padding: 0;
     min-width: 350px;
     min-height: 350px;
   }
@@ -592,12 +593,11 @@ footer {
     width: 45%;
     padding-left: 0;
     border-radius: 0 20px 20px 0;
-    min-height: 450px;
-    margin-top: 0;
+    min-height: 500px;
     align-items: flex-start;
   }
 
-  footer {
-    width: 100%;
+  .accordion-section h1 {
+    margin-top: 15%;
   }
 }
